@@ -20,14 +20,20 @@ namespace ProjetoMotos
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
             String[] NomeFotosMotos = Directory.GetFiles("@C:\\Users\\victoria.tbarros\\OneDrive\\PROJETO SENAC\\Fotos");
 
             foreach (string imgMotos in NomeFotosMotos) ;
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (comboBox1.Text == "HONDA")
+                { comboBox2.Items.Add ("AFRICA TWIN");
         }
     }
 }
