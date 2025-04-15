@@ -86,7 +86,8 @@ namespace ProjetoMotos
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Simulação telaNova = new Simulação();
+            telaNova.ShowDialog(); // abre como janela modal
         }
     }
 }
