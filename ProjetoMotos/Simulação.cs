@@ -12,9 +12,12 @@ namespace ProjetoMotos
 {
     public partial class Simulação: Form
     {
-        public Simulação()
+        string _urlImagem;
+        public Simulação(string urlImagem)
         {
             InitializeComponent();
+            _urlImagem = urlImagem;
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -24,12 +27,18 @@ namespace ProjetoMotos
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
+             
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Simulação_Load(object sender, EventArgs e)
+        {
+            pictureBox1.ImageLocation = _urlImagem;
         }
     }
 }

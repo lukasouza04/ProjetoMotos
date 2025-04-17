@@ -23,5 +23,10 @@ namespace ProjetoMotos
             Form1 telaNova = new Form1();
             telaNova.ShowDialog(); // abre como janela modal
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

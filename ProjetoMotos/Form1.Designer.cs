@@ -144,6 +144,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Form1";
             this.Text = "Vizualizador de Protudos ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
