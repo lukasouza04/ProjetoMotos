@@ -142,10 +142,13 @@ namespace ProjetoMotos
                         }
 
                     }
-
-
-
+                {
+                    Form1 Simulãção = new Form1();
+                    telaNova.ShowDialog();
                 }
+
+
+            }
             }
         }
     }

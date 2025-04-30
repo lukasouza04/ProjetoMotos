@@ -19,9 +19,12 @@ namespace ProjetoMotos
         }
 
         private void button1_Click(object sender, EventArgs e)
+
         {
             Form1 telaNova = new Form1();
             telaNova.ShowDialog(); // abre como janela modal
+           // button1.Font = new Font("Times New Roman", 16, FontStyle.Bold);
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
