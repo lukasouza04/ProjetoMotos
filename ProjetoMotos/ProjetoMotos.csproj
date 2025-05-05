@@ -118,6 +118,12 @@
     <Compile Include="Simulação.Designer.cs">
       <DependentUpon>Simulação.cs</DependentUpon>
     </Compile>
+    <Compile Include="valores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="valores.Designer.cs">
+      <DependentUpon>valores.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +142,9 @@
     <EmbeddedResource Include="Simulação.resx">
       <DependentUpon>Simulação.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="valores.resx">
+      <DependentUpon>valores.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -150,8 +159,28 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Imagens\" />
+    <Content Include="Imagens\Fotos\AFRICA TWIN.jpg" />
+    <Content Include="Imagens\Fotos\BIZ.jpg" />
+    <Content Include="Imagens\Fotos\CB TWISTER.jpg" />
+    <Content Include="Imagens\Fotos\CBR.jpg" />
+    <Content Include="Imagens\Fotos\F800.jpg" />
+    <Content Include="Imagens\Fotos\F800R.jpg" />
+    <Content Include="Imagens\Fotos\FAZER 250.jpg" />
+    <Content Include="Imagens\Fotos\GS 1250.jpg" />
+    <Content Include="Imagens\Fotos\GS 310.jpg" />
+    <Content Include="Imagens\Fotos\H2R.jpg" />
+    <Content Include="Imagens\Fotos\MT 03.jpg" />
+    <Content Include="Imagens\Fotos\MT 09.jpg" />
+    <Content Include="Imagens\Fotos\NINJA 400.jpg" />
+    <Content Include="Imagens\Fotos\NINJA 650.jpg" />
+    <Content Include="Imagens\Fotos\R15.jpg" />
+    <Content Include="Imagens\Fotos\S1000RR.jpg" />
+    <Content Include="Imagens\Fotos\TITAN.jpg" />
+    <Content Include="Imagens\Fotos\XT 660.jpg" />
+    <Content Include="Imagens\Fotos\Z1000.jpg" />
+    <Content Include="Imagens\Fotos\Z800.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
