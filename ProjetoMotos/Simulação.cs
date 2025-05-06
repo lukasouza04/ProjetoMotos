@@ -7,17 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoMotos.Model;
 
 namespace ProjetoMotos
 {
     public partial class Simulação: Form
     {
         string _urlImagem;
-        public Simulação(string urlImagem)
+        public Moto _moto;
+        public Simulação(string urlImagem, Moto moto)
         {
             InitializeComponent();
             _urlImagem = urlImagem;
-           
+            _moto = moto;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -27,17 +29,35 @@ namespace ProjetoMotos
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
+            Simulacao simulacao = new Simulacao();
+            simulacao.Nome = txtNome.Text;
+            simulacao.DataNascimento = maskedTextBox1.Text;
+            simulacao.CPF = maskedTextBox2.Text;
+            simulacao.CNH = comboBox1.SelectedItem.ToString();
+
+
+            valores valores = new valores(simulacao);
+            valores.ShowDialog();
+
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            MessageBox.Show(comboBox1.SelectedItem.ToString());
 
         }
 
         private void Simulação_Load(object sender, EventArgs e)
         {
             pictureBox1.ImageLocation = _urlImagem;
+            label5.Text = _moto.Preco.ToString();
+
+
+
+
+            
+
         }
     }
 }

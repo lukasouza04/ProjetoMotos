@@ -35,13 +35,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 66);
+            this.label1.Location = new System.Drawing.Point(376, 173);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(750, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "OBRIGADO POR ESCOLHER A LV MOTOS  EM BREVE UM DE NOSSOS COLABORADORES ENTRARA EM " +
-    "CONTATO COM MAIORES INFORMÇÕES.";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label1.Text = "label1";
             // 
             // valores
             // 
@@ -52,6 +50,7 @@
             this.Controls.Add(this.label1);
             this.Name = "valores";
             this.Text = "valores";
+            this.Load += new System.EventHandler(this.valores_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
