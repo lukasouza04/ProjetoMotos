@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoMotos.Model;
+using ProjetoMotos.Properties;
 
 namespace ProjetoMotos
 {
@@ -35,6 +37,7 @@ namespace ProjetoMotos
                     pictureBox2.ImageLocation = @"C:\Users\victoria.tbarros\OneDrive\PROJETO SENAC\Fotos\" + comboBox2.Text + ".jpg";
                     pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
+            
 
             }
 
@@ -45,11 +48,25 @@ namespace ProjetoMotos
             if (comboBox1.Text == "HONDA ")
             {
                 comboBox2.Items.Clear();
-                comboBox2.Items.Add("AFRICA TWIN");
-                comboBox2.Items.Add("BIZ");
-                comboBox2.Items.Add("CB TWISTER");
-                comboBox2.Items.Add("CBR");
-                comboBox2.Items.Add("TITAN");
+
+                var motosHonda = new List<Moto>
+    {
+        new Moto("HONDA", "AFRICA TWIN", 91000),
+        new Moto("HONDA", "BIZ", 14000),
+        new Moto("HONDA", "CB TWISTER", 18000),
+        new Moto("HONDA", "CBR", 32000),
+        new Moto("HONDA", "TITAN", 15000)
+    };
+
+                comboBox2.DisplayMember = "Modelo"; // O que será mostrado na lista
+                comboBox2.ValueMember = "Self";     // "Self" não é padrão, veja abaixo como contornar
+
+                foreach (var moto in motosHonda)
+                {
+                    comboBox2.Items.Add(moto);
+                }
+
+                
             }
 
             else if (comboBox1.Text == "YAMAHA")
@@ -86,7 +103,12 @@ namespace ProjetoMotos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Simulação telaNova = new Simulação(@"C:\Users\victoria.tbarros\OneDrive\PROJETO SENAC\Fotos\" + comboBox2.Text + ".jpg");
+
+            Moto motoSelecionada = comboBox2.SelectedItem as Moto;
+
+            MessageBox.Show(motoSelecionada.Modelo);
+
+            Simulação telaNova = new Simulação(@"C:\Users\victoria.tbarros\OneDrive\PROJETO SENAC\Fotos\" + comboBox2.Text + ".jpg", motoSelecionada);
             telaNova.ShowDialog(); // abre como janela modal
 
             {
