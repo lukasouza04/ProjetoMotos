@@ -118,10 +118,64 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CB TWISTER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CB TWISTER1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AFRICA_TWIN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AFRICA TWIN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BIZ" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BIZ1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\BIZ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CBR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CBR.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CB_TWISTER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CB TWISTER.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F800" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F800.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="F800R" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F800R.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FAZER_250" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FAZER 250.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GS_1250" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GS 1250.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GS_310" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GS 310.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="H2R" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\H2R.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MT_03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MT 03.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MT_09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MT 09.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NINJA_400" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NINJA 400.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NINJA_650" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NINJA 650.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="R15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\R15.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="S1000RR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\S1000RR.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TITAN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TITAN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XT_660" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\XT 660.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Z1000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Z1000.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Z800" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Z800.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

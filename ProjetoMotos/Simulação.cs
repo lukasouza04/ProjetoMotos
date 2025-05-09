@@ -13,12 +13,12 @@ namespace ProjetoMotos
 {
     public partial class Simulação: Form
     {
-        string _urlImagem;
+        
         public Moto _moto;
-        public Simulação(string urlImagem, Moto moto)
+        public Simulação(Moto moto)
         {
             InitializeComponent();
-            _urlImagem = urlImagem;
+            
             _moto = moto;
         }
 
@@ -50,7 +50,7 @@ namespace ProjetoMotos
 
         private void Simulação_Load(object sender, EventArgs e)
         {
-            pictureBox1.ImageLocation = _urlImagem;
+            pictureBox1.Image = _moto.URLImage;
             label5.Text = _moto.Preco.ToString();
 
 

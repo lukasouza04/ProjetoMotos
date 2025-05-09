@@ -166,28 +166,31 @@
     <Folder Include="Imagens\Fotos\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\AFRICA TWIN.jpg" />
-    <Content Include="Resources\BIZ.jpg" />
+    <None Include="Resources\Z800.jpg" />
+    <None Include="Resources\africaTwin.bmp" />
+    <None Include="Resources\AFRICA TWIN.jpg" />
     <None Include="Resources\BIZ1.jpg" />
-    <Content Include="Resources\CB TWISTER.jpg" />
-    <Content Include="Resources\CBR.jpg" />
-    <Content Include="Resources\F800.jpg" />
-    <Content Include="Resources\F800R.jpg" />
-    <Content Include="Resources\FAZER 250.jpg" />
-    <Content Include="Resources\GS 1250.jpg" />
-    <Content Include="Resources\GS 310.jpg" />
-    <Content Include="Resources\H2R.jpg" />
-    <Content Include="Resources\MT 03.jpg" />
-    <Content Include="Resources\MT 09.jpg" />
-    <Content Include="Resources\NINJA 400.jpg" />
-    <Content Include="Resources\NINJA 650.jpg" />
-    <Content Include="Resources\R15.jpg" />
-    <Content Include="Resources\S1000RR.jpg" />
-    <Content Include="Resources\TITAN.jpg" />
-    <Content Include="Resources\XT 660.jpg" />
-    <Content Include="Resources\Z1000.jpg" />
-    <Content Include="Resources\Z800.jpg" />
+    <None Include="Resources\BIZ.jpg" />
+    <None Include="Resources\CB TWISTER.jpg" />
+    <None Include="Resources\CBR.jpg" />
+    <None Include="Resources\F800.jpg" />
+    <None Include="Resources\F800R.jpg" />
+    <None Include="Resources\FAZER 250.jpg" />
+    <None Include="Resources\GS 310.jpg" />
+    <None Include="Resources\GS 1250.jpg" />
+    <None Include="Resources\H2R.jpg" />
+    <None Include="Resources\MT 03.jpg" />
+    <None Include="Resources\MT 09.jpg" />
+    <None Include="Resources\NINJA 400.jpg" />
+    <None Include="Resources\NINJA 650.jpg" />
+    <None Include="Resources\R15.jpg" />
+    <None Include="Resources\S1000RR.jpg" />
+    <None Include="Resources\TITAN.jpg" />
+    <None Include="Resources\XT 660.jpg" />
     <None Include="Resources\CB TWISTER1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Z1000.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
