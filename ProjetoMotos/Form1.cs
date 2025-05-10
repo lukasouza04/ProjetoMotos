@@ -72,10 +72,10 @@ namespace ProjetoMotos
                 var motosYAMAHA = new List<Moto> {
 
                     new Moto("YAMAHA", "FAZER 250", 25000, Resources.FAZER_250),
-                    new Moto("YAMAHA", "MT 03", 34.000, Resources.MT_03),
-                    new Moto("YAMAHA", "MT 09", 60.000, Resources.MT_09),
-                    new Moto("YAMAHA", "XT 660", 40.000, Resources.XT_660),
-                    new Moto("YAMAHA", "R15", 22.000, Resources.R15) };
+                    new Moto("YAMAHA", "MT 03", 34000, Resources.MT_03),
+                    new Moto("YAMAHA", "MT 09", 60000, Resources.MT_09),
+                    new Moto("YAMAHA", "XT 660", 40000, Resources.XT_660),
+                    new Moto("YAMAHA", "R15", 22000, Resources.R15) };
 
 
                 comboBox2.DisplayMember = "Modelo";
@@ -95,11 +95,11 @@ namespace ProjetoMotos
 
                 var motosKAWASAKI = new List<Moto>
         {
-            new Moto("KAWASAKI", "H2R", 350.000, Resources.H2R),
-            new Moto("KAWASAKI", "NINJA 400", 32.000, Resources.NINJA_400),
-            new Moto("KAWASAKI", "NINJA 650", 47.000, Resources.NINJA_650),
-            new Moto("KAWASAKI", "Z800", 35.000, Resources.Z800),
-            new Moto("KAWASAKI", "R15", 22.000, Resources.R15)
+            new Moto("KAWASAKI", "H2R", 350000, Resources.H2R),
+            new Moto("KAWASAKI", "NINJA 400", 32000, Resources.NINJA_400),
+            new Moto("KAWASAKI", "NINJA 650", 47000, Resources.NINJA_650),
+            new Moto("KAWASAKI", "Z800", 35000, Resources.Z800),
+            new Moto("KAWASAKI", "R15", 22000, Resources.R15)
         };
 
                 comboBox2.DisplayMember = "Modelo"; // O que será mostrado na lista
@@ -120,11 +120,11 @@ namespace ProjetoMotos
 
                 var motosBMW = new List<Moto>
         {
-            new Moto("BMW", "F800", 33.000, Resources.F800),
-            new Moto("BMW", "GS 310",35.000, Resources.GS_310),
-            new Moto("BMW", "GS 1250", 100.000, Resources.GS_1250),
-            new Moto("BMW", "S1000RR", 121.000, Resources.S1000RR),
-            new Moto("BMW", "F800R", 33.000 , Resources.F800R)
+            new Moto("BMW", "F800", 33000, Resources.F800),
+            new Moto("BMW", "GS 310",35000, Resources.GS_310),
+            new Moto("BMW", "GS 1250", 100000, Resources.GS_1250),
+            new Moto("BMW", "S1000RR", 121000, Resources.S1000RR),
+            new Moto("BMW", "F800R", 33000 , Resources.F800R)
         };
 
                 comboBox2.DisplayMember = "Modelo"; // O que será mostrado na lista
@@ -146,7 +146,9 @@ namespace ProjetoMotos
         }
 
         private void button1_Click(object sender, EventArgs e)
+         
         {
+
 
             //_motoSelecionada = comboBox2.SelectedItem as Moto;
 

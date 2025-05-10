@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Org.BouncyCastle.Pqc.Crypto.Lms;
 using ProjetoMotos.Model;
 
 namespace ProjetoMotos
@@ -36,16 +37,17 @@ namespace ProjetoMotos
             simulacao.CNH = comboBox1.SelectedItem.ToString();
 
 
-            valores valores = new valores(simulacao);
-            valores.ShowDialog();
+            //MessageBox.Show(comboBox1.SelectedItem.ToString());
 
+           // MessageBox.Show("Operação concluída com sucesso.", "Mensagem");
+            MessageBox.Show($"Em breve um de nossos colaboradores entrara em contato, obrigado por escolher a LV MOTOS.");
+            
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(comboBox1.SelectedItem.ToString());
-
+            //MessageBox.Show($"Em breve um de nossos colaboradores entrara em contato, obrigado por escolher a LV MOTOS.");
         }
 
         private void Simulação_Load(object sender, EventArgs e)
