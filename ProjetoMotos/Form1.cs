@@ -15,9 +15,11 @@ namespace ProjetoMotos
 {
     public partial class Form1 : Form
     {
+        public Moto _motoSelecionada;
         public Form1()
         {
             InitializeComponent();
+            _motoSelecionada = new Moto();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -27,36 +29,30 @@ namespace ProjetoMotos
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String[] NomeFotosMotos = Directory.GetFiles(@"C:\Users\victoria.tbarros\OneDrive\PROJETO SENAC\Fotos");
-            foreach (string img in NomeFotosMotos)
-            {
-                string[] separador = img.Split('\\');
-                string[] nomeSelecionado = separador[6].Split('.');
-                if (comboBox2.Text == nomeSelecionado[0])
-                {
-                    pictureBox2.ImageLocation = @"C:\Users\victoria.tbarros\OneDrive\PROJETO SENAC\Fotos\" + comboBox2.Text + ".jpg";
-                    pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
-            
-
-            }
+            _motoSelecionada = comboBox2.SelectedItem as Moto;
+            pictureBox2.Image = _motoSelecionada.URLImage;
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+                     
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             if (comboBox1.Text == "HONDA ")
             {
-                comboBox2.Items.Clear();
+                ClearComboBox2();
+
 
                 var motosHonda = new List<Moto>
-    {
-        new Moto("HONDA", "AFRICA TWIN", 91000),
-        new Moto("HONDA", "BIZ", 14000),
-        new Moto("HONDA", "CB TWISTER", 18000),
-        new Moto("HONDA", "CBR", 32000),
-        new Moto("HONDA", "TITAN", 15000)
-    };
+                {
+
+                    new Moto("HONDA", "AFRICA TWIN", 91000, Resources.AFRICA_TWIN),
+                    new Moto("HONDA", "BIZ", 14000, Resources.BIZ),
+                    new Moto("HONDA", "CB TWISTER", 18000, Resources.CB_TWISTER),
+                    new Moto("HONDA", "CBR", 32000, Resources.CBR),
+                    new Moto("HONDA", "TITAN", 15000, Resources.TITAN)
+                };
 
                 comboBox2.DisplayMember = "Modelo"; // O que será mostrado na lista
                 comboBox2.ValueMember = "Self";     // "Self" não é padrão, veja abaixo como contornar
@@ -66,111 +62,110 @@ namespace ProjetoMotos
                     comboBox2.Items.Add(moto);
                 }
 
-                
+
             }
 
-            else if (comboBox1.Text == "YAMAHA")
+            if (comboBox1.Text == "YAMAHA")
             {
-                comboBox2.Items.Clear();
-                comboBox2.Items.Add("FAZER 250");
-                comboBox2.Items.Add("MT 03");
-                comboBox2.Items.Add("MT 09");
-                comboBox2.Items.Add("XT 660");
-                comboBox2.Items.Add("R15");
+                ClearComboBox2();
+
+                var motosYAMAHA = new List<Moto> {
+
+                    new Moto("YAMAHA", "FAZER 250", 25000, Resources.FAZER_250),
+                    new Moto("YAMAHA", "MT 03", 34000, Resources.MT_03),
+                    new Moto("YAMAHA", "MT 09", 60000, Resources.MT_09),
+                    new Moto("YAMAHA", "XT 660", 40000, Resources.XT_660),
+                    new Moto("YAMAHA", "R15", 22000, Resources.R15) };
+
+
+                comboBox2.DisplayMember = "Modelo";
+                comboBox2.ValueMember = "Self";
+
+                foreach (var moto in motosYAMAHA)
+                {
+                    comboBox2.Items.Add(moto);
+                }
             }
 
-            else if (comboBox1.Text == "KAWASAKI")
+
+            if (comboBox1.Text == "KAWASAKI")
             {
-                comboBox2.Items.Clear();
-                comboBox2.Items.Add("H2R");
-                comboBox2.Items.Add("NINJA 400");
-                comboBox2.Items.Add("NINJA 650");
-                comboBox2.Items.Add("Z800");
-                comboBox2.Items.Add("Z1000");
+                ClearComboBox2();
+
+
+                var motosKAWASAKI = new List<Moto>
+        {
+            new Moto("KAWASAKI", "H2R", 350000, Resources.H2R),
+            new Moto("KAWASAKI", "NINJA 400", 32000, Resources.NINJA_400),
+            new Moto("KAWASAKI", "NINJA 650", 47000, Resources.NINJA_650),
+            new Moto("KAWASAKI", "Z800", 35000, Resources.Z800),
+            new Moto("KAWASAKI", "R15", 22000, Resources.R15)
+        };
+
+                comboBox2.DisplayMember = "Modelo"; // O que será mostrado na lista
+                comboBox2.ValueMember = "Self";     // "Self" não é padrão, veja abaixo como contornar
+
+                foreach (var moto in motosKAWASAKI)
+                {
+                    comboBox2.Items.Add(moto);
+                }
             }
 
-            else if (comboBox1.Text == "BMW")
-            {
-                comboBox2.Items.Clear();
-                comboBox2.Items.Add("F800");
-                comboBox2.Items.Add("GS 310");
-                comboBox2.Items.Add("GS 1250");
-                comboBox2.Items.Add("S1000RR");
-                comboBox2.Items.Add("F800R");
-            }
 
+
+            if (comboBox1.Text == "BMW") {
+
+                ClearComboBox2();
+
+
+                var motosBMW = new List<Moto>
+        {
+            new Moto("BMW", "F800", 33000, Resources.F800),
+            new Moto("BMW", "GS 310",35000, Resources.GS_310),
+            new Moto("BMW", "GS 1250", 100000, Resources.GS_1250),
+            new Moto("BMW", "S1000RR", 121000, Resources.S1000RR),
+            new Moto("BMW", "F800R", 33000 , Resources.F800R)
+        };
+
+                comboBox2.DisplayMember = "Modelo"; // O que será mostrado na lista
+                comboBox2.ValueMember = "Self";     // "Self" não é padrão, veja abaixo como contornar
+
+                foreach (var moto in motosBMW)
+                {
+                    comboBox2.Items.Add(moto);
+                }
+
+            }
+               
+
+        }
+
+        private void ClearComboBox2() {
+            comboBox2.Items.Clear();
+            comboBox2.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
+         
         {
 
-            Moto motoSelecionada = comboBox2.SelectedItem as Moto;
 
-            MessageBox.Show(motoSelecionada.Modelo);
+            //_motoSelecionada = comboBox2.SelectedItem as Moto;
 
-            Simulação telaNova = new Simulação(@"C:\Users\victoria.tbarros\OneDrive\PROJETO SENAC\Fotos\" + comboBox2.Text + ".jpg", motoSelecionada);
+
+            Simulação telaNova = new Simulação(_motoSelecionada);
             telaNova.ShowDialog(); // abre como janela modal
-
-            {
-                String[] NomeFotosMotos = Directory.GetFiles(@"C:\Users\victoria.tbarros\OneDrive\PROJETO SENAC\Fotos");
-                foreach (string img in NomeFotosMotos)
-                {
-                    string[] separador = img.Split('\\');
-                    string[] nomeSelecionado = separador[6].Split('.');
-                    if (comboBox1.Text == nomeSelecionado[0])
-                    
-                        pictureBox1.ImageLocation = @"C:\Users\victoria.tbarros\OneDrive\PROJETO SENAC\Fotos\" + comboBox1.Text + ".jpg";
-                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-
-
-                        if (comboBox1.Text == "HONDA ")
-                        {
-                            comboBox2.Items.Clear();
-                            comboBox2.Items.Add("AFRICA TWIN");
-                            comboBox2.Items.Add("BIZ");
-                            comboBox2.Items.Add("CB TWISTER");
-                            comboBox2.Items.Add("CBR");
-                            comboBox2.Items.Add("TITAN");
-                        }
-
-                        else if (comboBox1.Text == "YAMAHA")
-                        {
-                            comboBox2.Items.Clear();
-                            comboBox2.Items.Add("FAZER 250");
-                            comboBox2.Items.Add("MT 03");
-                            comboBox2.Items.Add("MT 09");
-                            comboBox2.Items.Add("XT 660");
-                            comboBox2.Items.Add("R15");
-                        }
-
-                        else if (comboBox1.Text == "KAWASAKI")
-                        {
-                            comboBox2.Items.Clear();
-                            comboBox2.Items.Add("H2R");
-                            comboBox2.Items.Add("NINJA 400");
-                            comboBox2.Items.Add("NINJA 650");
-                            comboBox2.Items.Add("Z800");
-                            comboBox2.Items.Add("Z1000");
-                        }
-
-                        else if (comboBox1.Text == "BMW")
-                        {
-                            comboBox2.Items.Clear();
-                            comboBox2.Items.Add("F800");
-                            comboBox2.Items.Add("GS 310");
-                            comboBox2.Items.Add("GS 1250");
-                            comboBox2.Items.Add("S1000RR");
-                            comboBox2.Items.Add("F800R");
-                        }
-
-                    }
-                {
-                    Form1 Simulãção = new Form1();
-                    telaNova.ShowDialog();
-                }
-
-
-            }
-            }
         }
+            
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
     }

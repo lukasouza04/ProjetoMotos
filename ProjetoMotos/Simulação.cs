@@ -7,18 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Org.BouncyCastle.Pqc.Crypto.Lms;
 using ProjetoMotos.Model;
 
 namespace ProjetoMotos
 {
     public partial class Simulação: Form
     {
-        string _urlImagem;
+        
         public Moto _moto;
-        public Simulação(string urlImagem, Moto moto)
+        public Simulação(Moto moto)
         {
             InitializeComponent();
-            _urlImagem = urlImagem;
+            
             _moto = moto;
         }
 
@@ -33,30 +34,42 @@ namespace ProjetoMotos
             simulacao.Nome = txtNome.Text;
             simulacao.DataNascimento = maskedTextBox1.Text;
             simulacao.CPF = maskedTextBox2.Text;
-            simulacao.CNH = comboBox1.SelectedItem.ToString();
+            simulacao.Celular = maskedTextBox3.Text;
+        
 
 
-            valores valores = new valores(simulacao);
-            valores.ShowDialog();
+            //MessageBox.Show(comboBox1.SelectedItem.ToString());
 
+           // MessageBox.Show("Operação concluída com sucesso.", "Mensagem");
+            MessageBox.Show($"Em breve um de nossos colaboradores entrara em contato. Obrigado por escolher a LV MOTOS.");
+            
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(comboBox1.SelectedItem.ToString());
-
+            //MessageBox.Show($"Em breve um de nossos colaboradores entrara em contato, obrigado por escolher a LV MOTOS.");
         }
 
         private void Simulação_Load(object sender, EventArgs e)
         {
-            pictureBox1.ImageLocation = _urlImagem;
+            pictureBox1.Image = _moto.URLImage;
             label5.Text = _moto.Preco.ToString();
 
 
 
 
             
+
+        }
+
+        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
 
         }
     }
