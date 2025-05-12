@@ -67,6 +67,7 @@
             // 
             this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(368, 628);
             this.button1.Name = "button1";
@@ -112,7 +113,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        internal System.Windows.Forms.Button button1;
     }
 }

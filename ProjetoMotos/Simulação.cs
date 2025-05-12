@@ -34,13 +34,14 @@ namespace ProjetoMotos
             simulacao.Nome = txtNome.Text;
             simulacao.DataNascimento = maskedTextBox1.Text;
             simulacao.CPF = maskedTextBox2.Text;
-            simulacao.CNH = comboBox1.SelectedItem.ToString();
+            simulacao.Celular = maskedTextBox3.Text;
+        
 
 
             //MessageBox.Show(comboBox1.SelectedItem.ToString());
 
            // MessageBox.Show("Operação concluída com sucesso.", "Mensagem");
-            MessageBox.Show($"Em breve um de nossos colaboradores entrara em contato, obrigado por escolher a LV MOTOS.");
+            MessageBox.Show($"Em breve um de nossos colaboradores entrara em contato. Obrigado por escolher a LV MOTOS.");
             
 
         }
@@ -59,6 +60,16 @@ namespace ProjetoMotos
 
 
             
+
+        }
+
+        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
 
         }
     }
